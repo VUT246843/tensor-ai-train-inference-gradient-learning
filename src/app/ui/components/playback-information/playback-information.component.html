@@ -1,0 +1,49 @@
+    </div>
+                *ngIf="this.showLove && this.bottomContentTrack != undefined"
+            <app-rating
+                *ngIf="this.showRating && this.topContentTrack != undefined"
+            <app-love
+        </div>
+        <div class="d-flex flex-row align-items-center">
+                class="ml-2"
+                class="rating-position"
+                *ngIf="this.showLove && this.topContentTrack != undefined"
+                [lineHeight]="1.5"
+            {{ this.topContentTrack?.artists }}
+                [fontSize]="smallFontSize"
+                [fontSize]="smallFontSize"
+                [track]="this.topContentTrack"
+                *ngIf="this.showRating && this.bottomContentTrack != undefined"
+        <div class="d-flex flex-row align-items-center">
+                [lineHeight]="1.5"
+            ></app-rating>
+        </div>
+                [fontSize]="smallFontSize"
+        </div>
+            {{ this.topContentTrack?.title }}
+<div class="d-flex flex-column overflow-hidden" [style.height.px]="height">
+        <div class="ml-1" [ngClass]="this.largeFontClasses" [style.font-size.px]="largeFontSize" [style.line-height]="1.5">
+        <div class="ml-1" [ngClass]="this.smallFontClasses" [style.font-size.px]="smallFontSize" [style.line-height]="1.5">
+    <div class="d-flex flex-column" [ngClass]="this.flexJustifyClass" [@contentAnimation]="contentAnimation" [style.min-height.px]="height">
+            <app-rating
+        <div class="ml-1" [ngClass]="this.smallFontClasses" [style.font-size.px]="smallFontSize" [style.line-height]="1.5">
+        </div>
+    <div class="d-flex flex-column" [ngClass]="this.flexJustifyClass" [@contentAnimation]="contentAnimation" [style.min-height.px]="height">
+</div>
+                [lineHeight]="1.5"
+                class="ml-2"
+                [fontSize]="smallFontSize"
+                [track]="this.bottomContentTrack"
+            {{ this.bottomContentTrack?.artists }}
+            ></app-love>
+            {{ this.bottomContentTrack?.title }}
+                [track]="this.bottomContentTrack"
+            ></app-rating>
+            ></app-love>
+            <app-love
+                [lineHeight]="1.5"
+        </div>
+        </div>
+                [track]="this.topContentTrack"
+    </div>
+        <div class="ml-1" [ngClass]="this.largeFontClasses" [style.font-size.px]="largeFontSize" [style.line-height]="1.5">

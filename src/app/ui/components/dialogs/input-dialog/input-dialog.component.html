@@ -1,0 +1,12 @@
+<mat-dialog-actions>
+</mat-dialog-content>
+    </mat-form-field>
+        <input matInput [(ngModel)]="data.inputText" placeholder="{{ data?.placeHolderText }}" (keyup.enter)="closeDialog()" />
+    }}</app-accent-button>
+    <app-accent-button class="mr-2" [ngClass]="{ inactive: !this.hasInputText }" [mat-dialog-close]="true">{{
+<mat-dialog-content>
+        'ok' | translate
+<app-dialog-header icon="las la-question" [title]="data?.dialogTitle"></app-dialog-header>
+    <app-transparent-button [mat-dialog-close]="false">{{ 'cancel' | translate }}</app-transparent-button>
+    <mat-form-field>
+</mat-dialog-actions>

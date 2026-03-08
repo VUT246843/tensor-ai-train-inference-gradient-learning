@@ -1,0 +1,87 @@
+                            playlist.value.name,
+            [currentItem]="selectedArtistOrder"
+                (contextmenu)="onArtistContextMenu($event, artist)"
+                matTooltip="{{ 'shuffle-all' | translate }}"
+        <div class="d-flex flex-row align-items-center">
+                [applyItemFn]="applyArtistType"
+            [tooltipKey]="'choose-order'"
+                        this.addToPlaylistMenu.addArtistsToPlaylistAsync(
+                    "
+    </cdk-virtual-scroll-viewport>
+            </mat-menu>
+<div
+            <div class="mr-2 accent-color">{{ this.artists.length }}</div>
+    <ng-template matMenuContent let-artist="data">
+            <span>{{ 'add-to-playback-queue' | translate }}</span>
+            >
+                [items]="artistTypes"
+            </app-iterable-menu>
+            <i
+    <div *ngIf="this.addToPlaylistMenu.hasPlaylists">
+                    mat-menu-item
+        </div>
+        <app-iterable-menu
+                [currentItem]="selectedArtistType"
+            ></app-artist>
+        </button>
+    </div>
+            <mat-menu #playlistsMenu="matMenu">
+                    *ngFor="let playlist of this.addToPlaylistMenu.playlists[playlist.key] | keyvalue"
+        >
+                [highContrast]="true"
+            <span>{{ 'shuffle' | translate }}</span>
+    [matMenuTriggerFor]="artistContextMenu"
+                    <span>{{ playlist.value.name }}</span>
+    [style.left]="contextMenuOpener.positionX"
+    </div>
+        </ng-container>
+        <button mat-menu-item [matMenuTriggerFor]="addToPlaylistContextMenu">
+                    (click)="
+                (dblclick)="this.playbackService.enqueueAndPlayArtistAsync(artist, this.selectedArtistType)"
+            <app-iterable-menu
+
+            [items]="artistOrders"
+</div>
+<mat-menu #addToPlaylistContextMenu="matMenu">
+            [itemKeyFn]="artistOrderKey"
+            >
+    [style.top]="contextMenuOpener.positionY"
+                            playlist.value.path,
+<mat-menu #artistContextMenu="matMenu">
+    <cdk-virtual-scroll-viewport *ngIf="!this.shouldZoomOut" class="flex-grow mt-3" itemSize="30">
+                <span>{{ playlist.key }}</span>
+        </div>
+                            this.mouseSelectionWatcher.selectedItems
+</mat-menu>
+<div class="h-100 w-100 d-flex flex-column">
+        </button>
+            </i>
+            [applyItemFn]="applyArtistOrder"
+        <ng-container *ngFor="let playlist of this.addToPlaylistMenu.playlists | keyvalue">
+                        )
+        </button>
+            <button mat-menu-item [matMenuTriggerFor]="playlistsMenu">
+    #artistContextMenuAnchor
+    <div *ngIf="!this.addToPlaylistMenu.hasPlaylists" mat-menu-item class="inactive">{{ 'no-playlists' | translate }}</div>
+                </button>
+    <div class="h-24px align-items-center justify-content-between d-flex flex-row m-1">
+                >
+        <div *cdkVirtualFor="let artist of this.orderedArtists" (mousedown)="setSelectedArtists($event, artist)">
+        <button mat-menu-item (click)="onShuffleAndPlayAsync(artist)">
+        <button mat-menu-item (click)="onAddToQueueAsync(artist)">
+                <button
+                class="las la-random secondary-text font-16px pointer ml-2"
+></div>
+                [tooltipKey]="'choose-type'"
+                (click)="this.shuffleAllAsync()"
+    <app-semantic-zoom *ngIf="this.shouldZoomOut" class="mt-3" [SemanticZoomables]="this.orderedArtists"></app-semantic-zoom>
+</mat-menu>
+        </app-iterable-menu>
+            </button>
+    style="visibility: hidden; position: fixed"
+            <app-artist
+                [artist]="artist"
+            <span>{{ 'add-to-playlist' | translate }}</span>
+    </ng-template>
+                [itemKeyFn]="artistTypeKey"
+

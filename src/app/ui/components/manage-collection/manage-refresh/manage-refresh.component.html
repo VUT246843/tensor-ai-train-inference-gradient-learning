@@ -1,0 +1,19 @@
+        >
+        <app-toggle-switch class="mt-3" [(isChecked)]="settings.skipRemovedFilesDuringRefresh">
+    </app-transparent-button>
+    </div>
+    <mat-divider class="my-4"></mat-divider>
+    </div>
+    <div>{{ 'refresh-collection-now' | translate }}</div>
+    <div>
+    <div class="title">{{ 'automatic-refresh' | translate }}</div>
+            {{ 'refresh-collection-automatically' | translate }}</app-toggle-switch
+        {{ 'refresh-now' | translate }}
+        >
+        <app-toggle-switch [(isChecked)]="settings.refreshCollectionAutomatically">
+    <app-transparent-button class="mt-3" (click)="refreshNow()">
+    <div>
+</div>
+    <div class="title">{{ 'manual-refresh' | translate }}</div>
+            {{ 'skip-previously-removed-files' | translate }}</app-toggle-switch
+<div class="p-4">

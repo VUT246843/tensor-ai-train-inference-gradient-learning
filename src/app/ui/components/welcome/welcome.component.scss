@@ -1,0 +1,22 @@
+@import 'theming';
+@import 'font-faces';
+@import 'variables';
+
+.welcome-component {
+    width: 100vw;
+    height: calc(100vh - $titlebar-height);
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-content {
+    background: transparent !important;
+    flex: 1;
+    width: 100%;
+    max-width: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

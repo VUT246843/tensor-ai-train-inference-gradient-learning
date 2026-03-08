@@ -1,0 +1,17 @@
+        }"
+        matRipple
+</div>
+    <div class="app-artist__header pointer mx-1" *ngIf="artist.isZoomHeader" (click)="this.requestZoomOut()">
+        {{ artist.displayName }}
+        class="app-artist__name ellipsis px-1"
+        #trigger
+            'selected-item-background-important': artist.isSelected
+        [matRippleTrigger]="trigger"
+    </div>
+        [ngClass]="{
+    </div>
+        *ngIf="!artist.isZoomHeader"
+        {{ artist.zoomHeader }}
+    >
+    <div
+<div class="app-artist">

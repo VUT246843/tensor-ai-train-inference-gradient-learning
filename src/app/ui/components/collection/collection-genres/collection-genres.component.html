@@ -1,0 +1,28 @@
+<div class="collection-viewport">
+        ></as-split-area>
+            ><div class="left-side-pane">
+                class="p-3 fill"
+            ><div class="right-side-pane">
+                    [tracks]="this.tracks | tracksFilter: this.searchService.delayedSearchText"
+    <as-split gutterSize="4" unit="percent" direction="horizontal" (dragEnd)="splitDragEnd($event)">
+        <as-split-area [size]="leftPaneSize" minSize="5" maxSize="95"
+        <as-split-area [size]="rightPaneSize" minSize="5" maxSize="95"
+        <as-split-area [size]="centerPaneSize" minSize="5" maxSize="95"
+    </as-split>
+                <app-genre-browser
+                ></app-track-browser></div
+</div>
+            ><app-album-browser
+                [(albumsPersister)]="this.albumsPersister"
+                ></app-genre-browser></div
+        ></as-split-area>
+                    [trackOrders]="this.trackOrders"
+        ></as-split-area>
+                    class="p-3 fill"
+                    [(genresPersister)]="this.genresPersister"
+                    [genres]="this.genres | genresFilter: this.searchService.delayedSearchText"
+                    [(tracksPersister)]="this.tracksPersister"
+            ></app-album-browser
+                [albums]="this.albums | albumsFilter: this.searchService.delayedSearchText"
+                    class="p-3 fill"
+                <app-track-browser

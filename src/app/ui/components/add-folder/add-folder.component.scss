@@ -1,0 +1,33 @@
+.add-folder-component {
+    display: flex;
+    flex-direction: column;
+}
+
+.folder:hover {
+    background: var(--theme-hovered-item-background);
+}
+
+.folder__icon {
+    font-size: 18px;
+    color: var(--theme-accent-color);
+    transform: rotate(-90deg);
+}
+
+.folder__path {
+    flex: 1;
+}
+.folder__action {
+    font-size: 18px;
+    opacity: 0.4;
+    cursor: pointer;
+    display: none;
+}
+
+.folder:hover .folder-item__action {
+    background: var(--theme-hovered-item-background);
+    display: block !important;
+}
+
+.folder__checkbox {
+    margin-top: -4px !important;
+}

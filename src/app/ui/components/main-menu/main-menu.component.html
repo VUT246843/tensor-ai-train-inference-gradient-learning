@@ -1,0 +1,24 @@
+<mat-menu #menu="matMenu">
+    </div>
+        {{ 'manage-collection' | translate }}
+</div>
+    </button>
+    <div *ngIf="this.updateService.isUpdateAvailable">
+    </div>
+</mat-menu>
+<div class="window-button" mat-icon-button [matMenuTriggerFor]="menu" matTooltip="{{ 'open-menu' | translate }}">
+            <div class="accent-color">{{ 'download-action' | translate }} {{ this.applicationName }} {{ this.updateService.latestRelease }}</div>
+    </button>
+        <mat-divider></mat-divider>
+        {{ 'settings' | translate }}
+    </button>
+    <button mat-menu-item (click)="goToManageCollectionAsync()">
+        <div class="main-menu__updateindicator" *ngIf="this.updateService.isUpdateAvailable"></div>
+        </button>
+        {{ 'information' | translate }}
+    <div class="main-menu__button">
+    <button mat-menu-item (click)="goToSettingsAsync()">
+        <button mat-menu-item (click)="downloadLatestReleaseAsync()">
+    <mat-divider></mat-divider>
+        <div class="main-menu__icon las la-bars"></div>
+    <button mat-menu-item (click)="goToInformationAsync()">

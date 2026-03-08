@@ -1,0 +1,10 @@
+        <span class="invisible-background"></span>
+<div class="d-flex flex-row align-items-center my-2">
+</div>
+        <span class="slider"></span>
+    <label class="switch mr-3">
+        <input #theCheckBox type="checkbox" [checked]="this.isChecked" (change)="this.onCheckedChanged(theCheckBox.checked)" />
+    </div>
+        <ng-content></ng-content>
+    <div class="inactive-opacity" [ngClass]="{ 'full-opacity': this.isChecked }">
+    </label>

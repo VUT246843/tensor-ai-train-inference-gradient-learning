@@ -1,0 +1,9 @@
+<app-dialog-header icon="las la-exclamation" title="{{ 'error' | translate }}"></app-dialog-header>
+<mat-dialog-content>
+</mat-dialog-content>
+    <app-transparent-button [mat-dialog-close] (click)="viewLog()">{{ 'view-log' | translate }}</app-transparent-button>
+    <p *ngIf="data?.isGlobalError">{{ 'global-error' | translate }}</p>
+</mat-dialog-actions>
+<mat-dialog-actions>
+    <app-accent-button class="mr-2" [mat-dialog-close]>{{ 'ok' | translate }}</app-accent-button>
+    <p *ngIf="!data?.isGlobalError">{{ data?.errorText }}</p>

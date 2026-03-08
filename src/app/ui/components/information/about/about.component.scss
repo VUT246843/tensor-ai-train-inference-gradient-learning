@@ -1,0 +1,16 @@
+.contact-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contact-item-icon {
+    width: 36px;
+    font-size: 28px;
+}
+
+.contact-item-icon-fa {
+    padding-left: 3px;
+    width: 36px;
+    font-size: 18px;
+}

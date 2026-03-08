@@ -1,0 +1,16 @@
+/.angular/cache
+.idea/
+.VSCodeCounter/
+node_modules/
+dist/
+release/
+coverage/
+.DS_Store
+main.js
+main.js.map
+main/api/discord/*.js
+main/api/discord/*.js.map
+main/common/application/*.js
+main/common/application/*.js.map
+main/common/settings/*.js
+main/common/settings/*.js.map

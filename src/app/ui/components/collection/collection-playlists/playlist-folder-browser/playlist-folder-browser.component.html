@@ -1,0 +1,44 @@
+    #playlistFolderContextMenuAnchor
+            </div>
+    </ng-template>
+        <div
+                }"
+            <div
+        </div>
+    <cdk-virtual-scroll-viewport class="mt-3 playlist-folder-browser__list" itemSize="30">
+            <div *ngIf="this.playlistFolders.length !== 1">{{ 'playlist-folders' | translate }}</div>
+            (contextmenu)="onPlaylistFolderContextMenu($event, playlistFolder)"
+        >
+    [style.left]="contextMenuOpener.positionX"
+<div class="playlist-folder-browser">
+            (click)="createPlaylistFolderAsync()"
+        <button mat-menu-item (click)="onRenamePlaylistFolderAsync(playlistFolder)">{{ 'rename' | translate }}</button>
+            matRipple
+        </div>
+        <button mat-menu-item (click)="onDeletePlaylistFolderAsync(playlistFolder)">{{ 'delete' | translate }}</button>
+<mat-menu #playlistFolderContextMenu="matMenu">
+            matTooltip="{{ 'create-playlist-folder' | translate }}"
+    </cdk-virtual-scroll-viewport>
+    <div class="playlist-folder-browser__header m-1">
+                    'selected-item-background-important': playlistFolder.isSelected
+                {{ playlistFolder.name }}
+            icon="las la-plus"
+></div>
+</div>
+    </div>
+            >
+            (mousedown)="setSelectedPlaylistFolders($event, playlistFolder)"
+    [style.top]="contextMenuOpener.positionY"
+            <div class="playlist-folder-browser__number mr-2">{{ this.playlistFolders.length }}</div>
+    <ng-template matMenuContent let-playlistFolder="data">
+    [matMenuTriggerFor]="playlistFolderContextMenu"
+                class="playlist-folder__name ellipsis px-1"
+        <app-icon-button
+        <div class="playlist-folder-browser__count">
+        ></app-icon-button>
+                [ngClass]="{
+<div
+</mat-menu>
+            <div *ngIf="this.playlistFolders.length === 1">{{ 'playlist-folder' | translate }}</div>
+    style="visibility: hidden; position: fixed"
+            *cdkVirtualFor="let playlistFolder of playlistFolders"

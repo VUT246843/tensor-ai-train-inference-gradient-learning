@@ -1,0 +1,47 @@
+@import 'variables';
+@import 'font-faces';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none; // Removes yellow outline on elements
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: var(--fontsize);
+    color: var(--theme-primary-text);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+a {
+    color: var(--theme-accent-color) !important;
+    outline: none; // Removes yellow outline on links
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a > * {
+    color: var(--theme-accent-color) !important;
+}
+
+a:hover {
+    opacity: 0.8;
+}

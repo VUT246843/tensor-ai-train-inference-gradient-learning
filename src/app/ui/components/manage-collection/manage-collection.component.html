@@ -1,0 +1,33 @@
+        <app-manage-music *ngIf="this.leftToRight(0)" [@enterLeftToRight]></app-manage-music>
+        <!-- Refresh -->
+    <app-notification-bar></app-notification-bar>
+            </app-sub-menu-item>
+            <app-sub-menu-item [page]="2" [selectedPage]="this.page" (click)="this.setPage(2)">
+    </div>
+            </app-sub-menu-item>
+        <!-- Album-covers -->
+                {{ 'albums' | translate }}
+            <app-sub-menu-item [page]="0" [selectedPage]="this.page" (click)="this.setPage(0)">
+                {{ 'refresh' | translate }}
+        </app-sub-menu>
+    <div class="window-frame__titlebar theme-header-background">
+        <app-manage-albums *ngIf="this.leftToRight(2)" [@enterLeftToRight]></app-manage-albums>
+        <app-main-menu></app-main-menu>
+        <div *ngIf="appearanceService.needsTrafficLightMargin" class="window-frame__trafficlights"></div>
+        <app-manage-music *ngIf="this.rightToLeft(0)" [@enterRightToLeft]></app-manage-music>
+        <app-window-controls *ngIf="appearanceService.needsCustomWindowControls"></app-window-controls>
+        <div class="window-frame__dragarea"></div>
+        <!-- Music -->
+        <app-manage-refresh *ngIf="this.rightToLeft(1)" [@enterRightToLeft]></app-manage-refresh>
+        <app-sub-menu>
+    </div>
+            </app-sub-menu-item>
+</div>
+        <app-manage-albums *ngIf="this.rightToLeft(2)" [@enterRightToLeft]></app-manage-albums>
+            <app-sub-menu-item [page]="1" [selectedPage]="this.page" (click)="this.setPage(1)">
+        <app-back-button class="m-2"></app-back-button>
+        <app-switch-player-button></app-switch-player-button>
+    <div class="window-frame__content__with__notification__bar">
+<div class="window-frame">
+                {{ 'music' | translate }}
+        <app-manage-refresh *ngIf="this.leftToRight(1)" [@enterLeftToRight]></app-manage-refresh>

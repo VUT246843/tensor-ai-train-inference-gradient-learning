@@ -1,0 +1,18 @@
+                <mat-option *ngFor="let language of translatorService.languages" [value]="language">
+        {{ 'pick-your-language' | translate }}
+</div>
+    <div class="title">
+                </mat-option>
+<div class="d-flex flex-column p-3">
+        </mat-form-field>
+    </div>
+    <div class="larger">
+                    <div *ngIf="!language.showEnglishName">{{ language.localizedName }}</div>
+        {{ 'language' | translate }}
+    </div>
+    </div>
+        <mat-form-field>
+            </mat-select>
+    <div class="mt-3">
+                    <div *ngIf="language.showEnglishName">{{ language.localizedName }} ({{ language.englishName }})</div>
+            <mat-select [(ngModel)]="translatorService.selectedLanguage">

@@ -1,0 +1,110 @@
+        <button mat-menu-item (click)="onAddToQueueAsync(album)">
+            </button>
+                *ngIf="
+
+                    *ngFor="let playlist of this.addToPlaylistMenu.playlists[playlist.key] | keyvalue"
+    [style.top]="contextMenuOpener.positionY"
+        <button mat-menu-item [matMenuTriggerFor]="addToPlaylistContextMenu">
+
+    [matMenuTriggerFor]="albumContextMenu"
+                    (click)="this.toggleYearView()"
+                "
+        <div class="d-flex flex-row align-items-center">
+                ></app-album>
+        <div class="d-flex flex-row align-items-center">
+    </ng-template>
+            </app-iterable-menu>
+                [itemKeyFn]="albumOrderKey"
+        <div *cdkVirtualFor="let albumRow of this.albumRows">
+                    (contextmenu)="onAlbumContextMenu($event, album)"
+                <app-icon-button
+            <div class="mr-2 accent-color">{{ this.albums.length }}</div>
+<mat-menu #albumContextMenu="matMenu">
+                    <span>{{ playlist.value.name }}</span>
+                [currentItem]="selectedAlbumOrder"
+                    *ngFor="let album of albumRow.albums"
+            <span>{{ 'shuffle' | translate }}</span>
+                    mat-menu-item
+            </i>
+            </div>
+        </div>
+        </button>
+    </div>
+                matTooltip="{{ 'shuffle-all' | translate }}"
+    <cdk-virtual-scroll-viewport class="flex-grow mt-3" itemSize="170">
+            <span>{{ 'add-to-playback-queue' | translate }}</span>
+                    (click)="this.toggleYearView()"
+                <button
+                            this.mouseSelectionWatcher.selectedItems
+                (click)="this.shuffleAllAsync()"
+                [items]="albumOrders"
+                    *ngIf="!this.useCompactYearView"
+        </ng-container>
+                            playlist.value.name,
+            >
+            >
+            <app-iterable-menu
+                ></app-icon-button>
+        </button>
+    <ng-template matMenuContent let-album="data">
+                    [album]="album"
+    </div>
+            <div
+        </div>
+                    (click)="
+                    this.selectedAlbumOrder === albumOrderEnum.byYearDescending
+            <span>{{ 'add-to-playlist' | translate }}</span>
+    <div class="h-24px align-items-center justify-content-between d-flex flex-row m-1">
+        <ng-container *ngFor="let playlist of this.addToPlaylistMenu.playlists | keyvalue">
+                        this.addToPlaylistMenu.addAlbumsToPlaylistAsync(
+                    icon="las la-compress-arrows-alt"
+></div>
+</mat-menu>
+</mat-menu>
+            <i
+                    matTooltip="{{ 'compact-view' | translate }}"
+            >
+    <div *ngIf="this.addToPlaylistMenu.hasPlaylists">
+                            playlist.value.path,
+                    (dblclick)="this.playbackService.enqueueAndPlayAlbumAsync(album)"
+<div class="h-100 w-100 d-flex flex-column" #albumBrowserElement>
+                <span>{{ playlist.key }}</span>
+            </mat-menu>
+                    [showYear]="isSortedByYear && this.useCompactYearView"
+            <button mat-menu-item [matMenuTriggerFor]="playlistsMenu">
+                class="d-flex mr-4"
+    #albumContextMenuAnchor
+                <app-album
+                class="las la-random secondary-text font-16px pointer ml-2"
+    [style.left]="contextMenuOpener.positionX"
+    </cdk-virtual-scroll-viewport>
+            <div *ngIf="this.albums.length !== 1">{{ 'albums' | translate }}</div>
+        </div>
+            <div *ngIf="this.albums.length === 1">{{ 'album' | translate }}</div>
+                        )
+                    *ngIf="this.useCompactYearView"
+        </button>
+<mat-menu #addToPlaylistContextMenu="matMenu">
+
+            </div>
+                    class="m-2"
+    <div *ngIf="!this.addToPlaylistMenu.hasPlaylists" mat-menu-item class="inactive">{{ 'no-playlists' | translate }}</div>
+                    "
+                ></app-icon-button>
+                    this.selectedAlbumOrder === albumOrderEnum.byYearAscending ||
+                <app-icon-button
+                    icon="las la-expand-arrows-alt"
+    style="visibility: hidden; position: fixed"
+</div>
+                </button>
+            <mat-menu #playlistsMenu="matMenu">
+        <button mat-menu-item (click)="onShuffleAndPlayAsync(album)">
+            <div class="d-flex flex-row">
+                    [isSelected]="album.isSelected"
+                [tooltipKey]="'choose-order'"
+                >
+                    (mousedown)="setSelectedAlbums($event, album)"
+                [applyItemFn]="applyAlbumOrder"
+<div
+                style="margin-top: 1px"
+                    matTooltip="{{ 'expanded-view' | translate }}"

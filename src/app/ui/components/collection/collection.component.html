@@ -1,0 +1,60 @@
+            <app-sub-menu-item *ngIf="settings.showFoldersPage" [page]="5" [selectedPage]="this.page" (click)="this.setPage(5)">
+            <app-sub-menu-item *ngIf="settings.showGenresPage" [page]="1" [selectedPage]="this.page" (click)="this.setPage(1)">
+</div>
+            <app-collection-artists *ngIf="this.leftToRight(0)" [@enterLeftToRight]></app-collection-artists>
+            </app-sub-menu-item>
+            <app-collection-playback-pane class="app-collection-playback-controls__playback-pane"></app-collection-playback-pane>
+        <app-main-menu></app-main-menu>
+                {{ 'folders' | translate }}
+        <app-sub-menu>
+    <div class="window-frame__content">
+            <app-collection-artists *ngIf="this.rightToLeft(0)" [@enterRightToLeft]></app-collection-artists>
+        <app-logo-small class="m-2 draggable"></app-logo-small>
+            <app-collection-tracks *ngIf="this.rightToLeft(3)" [@enterRightToLeft]></app-collection-tracks>
+    <div class="window-frame__titlebar theme-header-background">
+            <app-collection-folders *ngIf="this.rightToLeft(5)" [@enterRightToLeft]></app-collection-folders>
+    <app-notification-bar></app-notification-bar>
+            <app-collection-genres *ngIf="this.leftToRight(1)" [@enterLeftToRight]></app-collection-genres>
+        <app-switch-player-button></app-switch-player-button>
+        </div>
+        <div *ngIf="appearanceService.needsTrafficLightMargin" class="window-frame__trafficlights"></div>
+                {{ 'albums' | translate }}
+            <!-- Artists -->
+            <app-sub-menu-item *ngIf="settings.showAlbumsPage" [page]="2" [selectedPage]="this.page" (click)="this.setPage(2)">
+        <div class="window-frame__dragarea"></div>
+            <!-- Tracks -->
+        <!-- Playback controls -->
+            <canvas id="collectionAudioVisualizer" class="app-collection-playback-controls__audio-visualizer"></canvas>
+        <app-window-controls *ngIf="appearanceService.needsCustomWindowControls"></app-window-controls>
+            <!-- Genres -->
+        </app-sub-menu>
+            </app-sub-menu-item>
+                {{ 'tracks' | translate }}
+            </app-sub-menu-item>
+            <!-- Albums -->
+            <app-sub-menu-item *ngIf="settings.showArtistsPage" [page]="0" [selectedPage]="this.page" (click)="this.setPage(0)">
+                {{ 'playlists' | translate }}
+                {{ 'genres' | translate }}
+    </div>
+        <div *ngIf="this.collectionNavigationService.hasVisiblePages()">
+            <app-collection-playlists *ngIf="this.rightToLeft(4)" [@enterRightToLeft]></app-collection-playlists>
+            <app-collection-tracks *ngIf="this.leftToRight(3)" [@enterLeftToRight]></app-collection-tracks>
+            <!-- Folders -->
+            <app-sub-menu-item *ngIf="settings.showTracksPage" [page]="3" [selectedPage]="this.page" (click)="this.setPage(3)">
+            <app-collection-folders *ngIf="this.leftToRight(5)" [@enterLeftToRight]></app-collection-folders>
+        <app-search-box class="p-2"></app-search-box>
+            <app-collection-genres *ngIf="this.rightToLeft(1)" [@enterRightToLeft]></app-collection-genres>
+            </app-sub-menu-item>
+            </app-sub-menu-item>
+            <!-- Playlists -->
+    </div>
+            <app-sub-menu-item *ngIf="settings.showPlaylistsPage" [page]="4" [selectedPage]="this.page" (click)="this.setPage(4)">
+<div class="window-frame">
+            <app-collection-albums *ngIf="this.leftToRight(2)" [@enterLeftToRight]></app-collection-albums>
+        </div>
+        <div class="app-collection-playback-controls__container">
+        <div class="app-collection-playback-controls__background theme-footer-background"></div>
+            <app-collection-playlists *ngIf="this.leftToRight(4)" [@enterLeftToRight]></app-collection-playlists>
+            </app-sub-menu-item>
+            <app-collection-albums *ngIf="this.rightToLeft(2)" [@enterRightToLeft]></app-collection-albums>
+                {{ 'artists' | translate }}

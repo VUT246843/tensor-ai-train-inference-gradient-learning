@@ -1,0 +1,36 @@
+                                [borderRadius]="this.settings.showSquareImages ? 0 : 10"></app-playback-cover-art>
+            <div *ngIf="this.hasLyrics" [innerText]="this.lyrics?.text"></div>
+            class="app-now-playing-lyrics__playback-info"
+        <div class="mt-3 mx-1">
+        <div class="break-on-newline">
+            <div class="secondary-text d-flex align-items-center" *ngIf="this.lyrics?.sourceType === lyricsSourceTypeEnum.none">
+    </div>
+        <app-playback-information
+            position="top"
+    </div>
+            </div>
+            </div>
+            [largeFontSize]="this.largeFontSize"
+    <div class="d-flex flex-column">
+    </div>
+    <div *ngIf="!this.isBusy" class="app-now-playing-lyrics__text">
+        <mat-spinner [diameter]="40"></mat-spinner>
+</div>
+            height="120"
+            <div class="secondary-text d-flex align-items-center" *ngIf="this.lyrics?.sourceType === lyricsSourceTypeEnum.embedded">
+            [smallFontSize]="this.smallFontSize"
+            </div>
+        </div>
+    <div *ngIf="this.isBusy" class="app-now-playing-lyrics__spinner">
+        </div>
+            <div class="secondary-text d-flex align-items-center" *ngIf="this.lyrics?.sourceType === lyricsSourceTypeEnum.lrc">
+                {{ 'no-lyrics' | translate }}<i class="secondary-text las la-frown ml-1"></i>
+        ></app-playback-information>
+        <app-playback-cover-art class="app-now-playing-lyrics__picture" [size]="300" 
+            <div class="secondary-text d-flex align-items-center" *ngIf="this.lyrics?.sourceType === lyricsSourceTypeEnum.online">
+<div class="app-now-playing-lyrics">
+            <div *ngIf="!this.hasLyrics">{{ 'no-lyrics-found' | translate }}</div>
+                {{ 'lrc-lyrics' | translate }}<i class="secondary-text las la-file-alt ml-1"></i>
+            </div>
+                {{ this.lyrics?.sourceName }}<i class="secondary-text las la-globe ml-1"></i>
+                {{ 'embedded-lyrics' | translate }}<i class="secondary-text las la-check ml-1"></i>

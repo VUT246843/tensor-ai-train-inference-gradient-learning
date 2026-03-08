@@ -1,0 +1,113 @@
+                        "dev": {
+                            "path": "./angular.webpack.js",
+                    "builder": "@angular-builders/custom-webpack:dev-server",
+                },
+                    "options": {
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "configurations": {
+                            "sourceMap": false,
+                            "outputHashing": "all",
+    "newProjectRoot": "projects",
+{
+                            "namedChunks": false,
+                    "options": {
+                        "tsConfig": "tsconfig.app.json",
+            "root": "",
+                        "main": "src/main.ts",
+                        "production": {
+                            ]
+                    "configurations": {
+                                    "with": "src/environments/environment.dev.ts"
+        "dopamine": {
+                        "customWebpackConfig": {
+                "serve": {
+                        "dev": {
+                            "buildOptimizer": true,
+                                    "replace": "src/environments/environment.ts",
+    "projects": {
+                        },
+                    "defaultConfiguration": "dev"
+    },
+                        }
+                    }
+                            "./node_modules/@fortawesome/fontawesome-free/css/all.css"
+    "cli": {
+                            "optimization": true,
+                "build": {
+                        "index": "src/index.html",
+                            "./node_modules/line-awesome/dist/line-awesome/css/line-awesome.css",
+            "sourceRoot": "src",
+                            "aot": false,
+                    "builder": "@angular-eslint/builder:lint",
+                            "aot": true,
+                    "options": {
+            "projectType": "application",
+                            "fileReplacements": [
+}
+                        "production": {
+                                    "with": "src/environments/environment.prod.ts"
+                            }
+                            "namedChunks": false,
+                },
+        "@schematics/angular:component": {
+                        "assets": ["src/assets"],
+                            "optimization": false,
+                            ]
+                    }
+                            "src/styles.scss",
+                        "polyfills": "src/polyfills.ts",
+            "style": "scss"
+                "extract-i18n": {
+                "lint": {
+        }
+                    }
+                        },
+                    },
+                },
+                        }
+    "schematics": {
+                }
+                        "browserTarget": "dopamine:build"
+                            "includePaths": ["src/css"]
+                        "styles": [
+                    "builder": "@angular-builders/custom-webpack:browser",
+                                }
+                            "sourceMap": true,
+                            "browserTarget": "dopamine:build:dev"
+                                "externals": "append"
+                    },
+    "version": 1,
+                                {
+                            "mergeStrategies": {
+        "schematicCollections": ["@angular-eslint/schematics"]
+        "analytics": false,
+                        "outputPath": "dist",
+                        "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+                            "extractLicenses": true,
+            "architect": {
+                            "fileReplacements": [
+                        },
+                        "stylePreprocessorOptions": {
+                        }
+                        ],
+                                {
+                            "vendorChunk": false,
+                    "options": {
+                            "vendorChunk": false,
+                                }
+                            "browserTarget": "dopamine:build:production"
+                        "browserTarget": "dopamine:build"
+                            "buildOptimizer": false,
+                    },
+    }
+        },
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+        "@schematics/angular:directive": {
+            }
+    },
+            "prefix": "app",
+            "prefix": "app"
+        }
+                            "outputHashing": "all",
+                                    "replace": "src/environments/environment.ts",
+                            "extractLicenses": true,

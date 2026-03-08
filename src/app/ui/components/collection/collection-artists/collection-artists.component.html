@@ -1,0 +1,28 @@
+                    class="p-3 fill"
+                    [trackOrders]="this.trackOrders"
+        ></as-split-area>
+            ><div class="left-side-pane">
+        ></as-split-area>
+                    class="p-3 fill"
+        <as-split-area [size]="rightPaneSize" minSize="5" maxSize="95"
+        <as-split-area [size]="leftPaneSize" minSize="5" maxSize="95"
+                    [artists]="this.artists | artistsFilter: this.searchService.delayedSearchText"
+                    [(tracksPersister)]="this.tracksPersister"
+                ></app-artist-browser></div
+</div>
+            ></app-album-browser
+                ></app-track-browser></div
+            ><app-album-browser
+<div class="collection-viewport">
+                <app-artist-browser
+            ><div class="right-side-pane">
+                    [(artistsPersister)]="this.artistsPersister"
+    <as-split gutterSize="4" unit="percent" direction="horizontal" (dragEnd)="splitDragEnd($event)">
+                [(albumsPersister)]="this.albumsPersister"
+                <app-track-browser
+                    [tracks]="this.tracks | tracksFilter: this.searchService.delayedSearchText"
+                class="p-3 fill"
+        <as-split-area [size]="centerPaneSize" minSize="5" maxSize="95"
+                [albums]="this.albums | albumsFilter: this.searchService.delayedSearchText"
+    </as-split>
+        ></as-split-area>

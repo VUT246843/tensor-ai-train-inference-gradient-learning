@@ -1,0 +1,38 @@
+                ></app-toggle-switch>
+                        <i class="folder__icon m-1 lar la-folder"></i>
+                    (mousedown)="setSelectedFolder(folder)"
+    </div>
+        <div *ngFor="let folder of folders">
+                    <div class="d-flex flex-row flex-grow" [ngClass]="{ inactive: showCheckBoxes && !folder.showInCollection }">
+    </app-toggle-switch>
+                    class="folder d-flex flex-grow align-items-center"
+                <app-toggle-switch
+                    matRipple
+<div class="add-folder-component" [ngClass]="{ inactive: indexingService.isIndexingCollection }">
+                    *ngIf="showCheckBoxes"
+    <div class="mb-3">
+                        class="folder__action m-1 las la-times"
+            </div>
+                >
+                </div>
+                <div
+    </div>
+        <app-icon-text-button (click)="addFolderAsync()" icon="las la-plus">{{ 'add-folder' | translate }} </app-icon-text-button>
+                    [ngClass]="{ 'selected-item-background-important': folder === selectedFolder }"
+            <div class="d-flex flex-row align-items-center">
+                    class="folder__checkbox"
+                        (click)="deleteFolderAsync(folder)"
+                    matTooltip="{{ 'show-in-the-collection' | translate }}"
+                        matTooltip="{{ 'delete-folder' | translate }}"
+    <app-toggle-switch class="mb-2" [(isChecked)]="showAllFoldersInCollection" *ngIf="showCheckBoxes">
+                    [(isChecked)]="folder.showInCollection"
+</div>
+                        [ngStyle]="{ display: folder === selectedFolder ? 'block' : 'none' }"
+                    </div>
+                    (isCheckedChange)="setFolderVisibility(folder)"
+    <div class="mt-1">
+        {{ 'show-all-folders-in-the-collection' | translate }}
+        </div>
+                    ></i>
+                        <div class="folder__path ellipsis m-1" matTooltip="{{ folder.path }}">{{ folder.path }}</div>
+                    <i

@@ -1,0 +1,77 @@
+</div>
+            class="d-flex flex-row align-items-center app-playback-controls__loop-one"
+    <div
+        <i
+        class="app-playback-controls__button pointer mx-1"
+            [ngClass]="{ 'app-playback-controls__accent': this.playbackService.isShuffled }"
+        (click)="playbackService.toggleLoopMode()"
+    </div>
+        (click)="playbackService.pause()"
+        matRipple
+            class="app-playback-controls__icon las la-random"
+    <!-- Shuffle -->
+    </div>
+        >
+        matRipple
+    >
+            [ngClass]="{
+        <i
+        *ngIf="playbackService.canResume"
+    </div>
+        matTooltip="{{ 'pause' | translate }}"
+
+            *ngIf="this.playbackService.loopMode !== loopModeEnum.One"
+    <div
+        *ngIf="playbackService.canPause"
+        matTooltip="{{ 'loop' | translate }}"
+    >
+    >
+            ><span class="app-playback-controls__icon-one">1</span></span
+    <div
+        class="app-playback-controls__button pointer mx-1"
+            *ngIf="this.playbackService.loopMode === loopModeEnum.One"
+        <i class="app-playback-controls__icon las la-play"></i>
+        class="app-playback-controls__circled-button pointer mx-1"
+<div class="app-playback-controls">
+        matRipple
+        <i class="app-playback-controls__icon las la-step-backward"></i>
+    >
+
+        (click)="playbackService.toggleIsShuffled()"
+        <i class="app-playback-controls__icon las la-pause"></i>
+        matRipple
+        ></i>
+    </div>
+    <div
+        class="app-playback-controls__circled-button pointer mx-1"
+        class="app-playback-controls__button pointer mx-1"
+        (click)="playbackService.playNextAsync()"
+        matTooltip="{{ 'next' | translate }}"
+    <!-- Play/Pause -->
+        >
+                'app-playback-controls__accent': this.playbackService.loopMode === loopModeEnum.All
+            <i class="app-playback-controls__icon app-playback-controls__accent las la-redo-alt"></i
+        <i class="app-playback-controls__icon las la-step-forward"></i>
+        matRipple
+    <!-- Loop -->
+    <div
+            }"
+    </div>
+    >
+    >
+        class="app-playback-controls__button pointer mx-1"
+        <span
+        matRipple
+    <!-- Play next -->
+        matTooltip="{{ 'play' | translate }}"
+
+        matTooltip="{{ 'previous' | translate }}"
+        (click)="playbackService.resumeAsync()"
+        matTooltip="{{ 'shuffle' | translate }}"
+        ></i>
+
+        (click)="playbackService.playPreviousAsync()"
+            class="app-playback-controls__icon las la-redo-alt"
+    </div>
+    <!-- Play previous -->
+    <div

@@ -1,0 +1,27 @@
+                    [(tracksPersister)]="this.tracksPersister"
+            ><div class="right-side-pane">
+            <app-playlist-browser
+                    class="p-3 fill"
+                    [playlistFolders]="this.playlistFolders"
+    <as-split gutterSize="4" unit="percent" direction="horizontal" (dragEnd)="splitDragEnd($event)">
+        <as-split-area [size]="rightPaneSize" minSize="5" maxSize="95"
+                ></app-playlist-folder-browser></div
+                class="p-3 fill"
+                ></app-playlist-track-browser></div
+    </as-split>
+                    class="p-3 fill"
+            ></app-playlist-browser>
+                <app-playlist-folder-browser
+                <app-playlist-track-browser
+        </as-split-area>
+</div>
+                    [(playlistFoldersPersister)]="this.playlistFoldersPersister"
+                    [tracks]="this.tracks | tracksFilter: this.searchService.delayedSearchText"
+            ><div class="left-side-pane">
+        ></as-split-area>
+<div class="collection-viewport">
+        <as-split-area [size]="centerPaneSize" minSize="5" maxSize="95">
+        ></as-split-area>
+        <as-split-area [size]="leftPaneSize" minSize="5" maxSize="95"
+                [playlists]="this.playlists | playlistsFilter: this.searchService.delayedSearchText"
+                [(playlistsPersister)]="this.playlistsPersister"

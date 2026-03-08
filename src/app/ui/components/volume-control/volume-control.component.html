@@ -1,0 +1,14 @@
+</div>
+    </div>
+        <i class="app-volume-control__icon__alt las la-volume-mute" *ngIf="this.volume === 0"></i>
+        <i class="app-volume-control__icon__alt las la-volume-down" *ngIf="this.volume > 0 && this.volume < 0.5"></i>
+        [maximum]="1"
+        class="app-volume-control__slider ml-3 mr-2"
+        [stepSize]="0.01"
+        <i class="app-volume-control__icon las la-volume-up" *ngIf="this.volume >= 0.5"></i>
+    ></app-slider>
+    <app-slider
+<div class="app-volume-control">
+    <div class="pointer" (click)="this.toggleMute()" matTooltip="{{ (this.volume === 0 ? 'unmute' : 'mute') | translate }}">
+        [(value)]="this.volume"
+        [mouseStepSize]="0.05"

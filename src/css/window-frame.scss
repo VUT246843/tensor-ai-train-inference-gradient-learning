@@ -1,0 +1,61 @@
+.window-frame {
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: $titlebar-height;
+}
+
+.window-frame__titlebar {
+    width: 100%;
+    height: $titlebar-height;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.window-frame__dragarea {
+    height: $titlebar-height;
+    line-height: $titlebar-height;
+    flex: 1;
+    -webkit-app-region: drag;
+    color: white;
+}
+
+.window-frame__trafficlights{
+    width: 70px;
+    flex: 0 0 70px;
+}
+
+.window-frame__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.window-frame__content {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    max-height: calc(100vh - $titlebar-height);
+    width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.window-frame__content__with__notification__bar {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    max-height: calc(100vh - $titlebar-height - var(--notification-bar-correction));
+    width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

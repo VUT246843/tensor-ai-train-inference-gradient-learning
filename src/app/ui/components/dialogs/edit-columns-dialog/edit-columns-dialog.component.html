@@ -1,0 +1,24 @@
+        }}</app-toggle-switch>
+        <app-toggle-switch [(isChecked)]="this.tracksColumnsVisibility.showDuration">{{ 'duration' | translate }}</app-toggle-switch>
+        <app-toggle-switch [(isChecked)]="this.tracksColumnsVisibility.showPlayCount">{{ 'plays' | translate }}</app-toggle-switch>
+    ><div class="d-flex flex-column">
+        <app-toggle-switch [(isChecked)]="this.tracksColumnsVisibility.showYear">{{ 'year' | translate }}</app-toggle-switch>
+        {{ 'ok' | translate }}
+<mat-dialog-actions>
+        <app-toggle-switch [(isChecked)]="this.tracksColumnsVisibility.showDateLastPlayed">{{
+<app-dialog-header icon="las la-columns" title="{{ 'columns' | translate }}"></app-dialog-header>
+<mat-dialog-content
+        <app-toggle-switch [(isChecked)]="this.tracksColumnsVisibility.showDateAdded">{{ 'date-added' | translate }}</app-toggle-switch>
+    <app-transparent-button [mat-dialog-close]="false">{{ 'cancel' | translate }}</app-transparent-button>
+    <app-accent-button class="mr-2" [mat-dialog-close]="true" (click)="this.setTracksColumnsVisibility()">
+        <app-toggle-switch [(isChecked)]="this.tracksColumnsVisibility.showTrackNumber">{{ 'number' | translate }}</app-toggle-switch>
+            'last-played' | translate
+    </app-accent-button>
+>
+        <app-toggle-switch [(isChecked)]="this.tracksColumnsVisibility.showRating">{{ 'rating' | translate }}</app-toggle-switch>
+</mat-dialog-actions>
+    </div></mat-dialog-content
+        <app-toggle-switch [(isChecked)]="this.tracksColumnsVisibility.showSkipCount">{{ 'skips' | translate }}</app-toggle-switch>
+        <app-toggle-switch [(isChecked)]="this.tracksColumnsVisibility.showGenres">{{ 'genres' | translate }}</app-toggle-switch>
+        <app-toggle-switch [(isChecked)]="this.tracksColumnsVisibility.showAlbum">{{ 'album' | translate }}</app-toggle-switch>
+        <app-toggle-switch [(isChecked)]="this.tracksColumnsVisibility.showArtists">{{ 'artists' | translate }}</app-toggle-switch>

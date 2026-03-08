@@ -1,0 +1,14 @@
+    >
+    <app-toggle-switch [(isChecked)]="settings.enableDiscordRichPresence">
+<div class="d-flex flex-column p-3">
+        {{ 'online-preferences' | translate }}
+        {{ 'online' | translate }}
+</div>
+    </div>
+    </div>
+        {{ 'enable-discord-rich-presence' | translate }}</app-toggle-switch
+    >
+    <div class="larger">
+    <app-toggle-switch class="mt-3" [(isChecked)]="settings.downloadMissingAlbumCovers">
+    <div class="title">
+        {{ 'download-missing-album-covers' | translate }}</app-toggle-switch

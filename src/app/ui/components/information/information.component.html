@@ -1,0 +1,27 @@
+        <!-- About -->
+        <app-about *ngIf="this.rightToLeft(0)" [@enterRightToLeft]></app-about>
+                {{ 'components' | translate }}
+        <app-window-controls *ngIf="appearanceService.needsCustomWindowControls"></app-window-controls>
+        <app-back-button class="m-2"></app-back-button>
+</div>
+    <div class="window-frame__titlebar theme-header-background">
+        <app-switch-player-button></app-switch-player-button>
+            </app-sub-menu-item>
+            <app-sub-menu-item [page]="0" [selectedPage]="this.page" (click)="this.setPage(0)">
+                {{ 'about' | translate }}
+        <!-- Components -->
+            </app-sub-menu-item>
+        <app-main-menu></app-main-menu>
+        <app-sub-menu>
+    </div>
+        <app-about *ngIf="this.leftToRight(0)" [@enterLeftToRight]></app-about>
+        </app-sub-menu>
+        <div *ngIf="appearanceService.needsTrafficLightMargin" class="window-frame__trafficlights"></div>
+    <app-notification-bar></app-notification-bar>
+<div class="window-frame">
+            <app-sub-menu-item [page]="1" [selectedPage]="this.page" (click)="this.setPage(1)">
+    <div class="window-frame__content__with__notification__bar">
+    </div>
+        <app-components *ngIf="this.rightToLeft(1)" [@enterRightToLeft]></app-components>
+        <div class="window-frame__dragarea"></div>
+        <app-components *ngIf="this.leftToRight(1)" [@enterLeftToRight]></app-components>

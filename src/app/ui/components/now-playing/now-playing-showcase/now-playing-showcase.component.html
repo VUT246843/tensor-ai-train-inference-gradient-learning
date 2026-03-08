@@ -1,0 +1,20 @@
+                [showLove]="this.settings.showLove"
+    <div class="app-now-playing-showcase__song">
+            </app-playback-information>
+        <div class="app-now-playing-showcase__songinfo" [style.height.px]="coverArtSize">
+<div class="app-now-playing-showcase">
+
+            <app-playback-cover-art [size]="coverArtSize" [borderRadius]="this.settings.showSquareImages ? 0 : 10"></app-playback-cover-art>
+</div>
+    </div>
+                [showRating]="this.settings.showRating"
+                [largeFontSize]="playbackInformationLargeFontSize"
+                [height]="playbackInformationHeight"
+                position="bottom"
+                [smallFontSize]="playbackInformationSmallFontSize"
+        </div>
+            >
+        </div>
+        <div class="app-now-playing-showcase__cover">
+            <app-playback-information
+                class="ml-4"

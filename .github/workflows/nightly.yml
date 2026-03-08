@@ -1,0 +1,141 @@
+                  cd release
+        steps:
+            - name: build
+              uses: actions/upload-artifact@v4
+                  name: dopamine-nightly-macos-intel
+        runs-on: macos-15
+        runs-on: windows-2022
+              run: npm run test
+                  path: 'package.json'
+              run: npm run test
+              with:
+
+              run: npm run electron:windows
+            - uses: actions/checkout@v2
+                  path: release/Dopamine-*.snap
+              run: npm run test
+    nightly_build_on_mac_intel:
+              run: |
+              id: ver_name
+    nightly_build_on_linux:
+on:
+                  prop_path: 'version'
+              uses: actions/upload-artifact@v4
+              id: ver_name
+                  name: dopamine-nightly-deb
+              id: ver_name
+            - name: upload build artifacts
+                  path: release/Dopamine-*.pacman
+              with:
+name: Nightly builds
+jobs:
+
+        steps:
+              with:
+
+                  path: release/Dopamine-*.AppImage
+              uses: actions/upload-artifact@v4
+            - name: upload build artifacts
+              uses: actions/upload-artifact@v4
+              run: npm run electron:mac
+              run: npm install
+              uses: notiz-dev/github-action-json-property@release
+              run: |
+            - uses: actions/setup-node@master
+              run: npm run electron:linux
+            - name: Download and Install 7-Zip
+                  path: 'package.json'
+              uses: actions/upload-artifact@v4
+    workflow_dispatch:
+              uses: actions/upload-artifact@v4
+                  "C:\Program Files\7-Zip\7z.exe" a ../dopamine-nightly-win.7z Dopamine-*.exe
+            - name: upload deb artifact
+              with:
+              with:
+                  name: dopamine-nightly-appimage
+            - uses: actions/checkout@v2
+            - name: build
+              run: npm install
+    schedule:
+              run: sudo apt install rpm libarchive-tools
+                  node-version: '22.x'
+    nightly_build_on_win:
+            - uses: actions/checkout@v2
+                  path: release/Dopamine-*.dmg
+            - name: run unit tests
+              id: ver_name
+        steps:
+                  path: 'package.json'
+            - name: upload appimage artifact
+                  name: dopamine-nightly-pacman
+              run: sudo apt update
+                  name: dopamine-nightly-macos-arm
+                  curl -L -o 7z.exe https://www.7-zip.org/a/7z2201-x64.exe
+            - name: upload pacman artifact
+              with:
+        runs-on: ubuntu-22.04
+              run: npm install
+            - name: install dependencies
+              uses: notiz-dev/github-action-json-property@release
+            - name: run unit tests
+            - name: fetch current version
+                  name: dopamine-nightly-rpm
+              with:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@master
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+              with:
+            - name: Upload Build Artifact
+            - name: Create 7z Archive With Only EXE Files
+env:
+              run: npm run test
+            - name: install rpm and libarchive
+              with:
+        runs-on: macos-15-intel
+            - uses: actions/setup-node@master
+            - name: fetch current version
+            - name: uploading rpm artifact
+                  path: 'package.json'
+              with:
+        - cron: '0 0 * * *'
+                  node-version: '22.x'
+              run: npm run electron:mac
+            - name: Build
+              with:
+            - uses: actions/setup-node@master
+              uses: actions/upload-artifact@v4
+              with:
+            - name: Run unit tests
+                  path: dopamine-nightly-win.7z
+              uses: notiz-dev/github-action-json-property@release
+            - name: build
+                  name: dopamine-nightly-snap
+    nightly_build_on_mac_arm:
+              run: npm install
+            - name: fetch current version
+            - name: upload snap artifact
+                  path: release/Dopamine-*.dmg
+                  node-version: '22.x'
+                  prop_path: 'version'
+              shell: cmd
+            - name: install dependencies
+            - name: run unit tests
+                  path: release/Dopamine-*.rpm
+                  prop_path: 'version'
+                  path: release/Dopamine-*.deb
+                  node-version: '22.x'
+              with:
+              uses: notiz-dev/github-action-json-property@release
+              with:
+              with:
+              with:
+                  prop_path: 'version'
+                  name: dopamine-nightly-win
+            - name: Fetch current version
+              uses: actions/upload-artifact@v4
+                  Start-Process -FilePath 7z.exe -ArgumentList '/S' -Wait
+            - name: Install dependencies
+            - name: install dependencies
+        steps:
+            - name: update package directory

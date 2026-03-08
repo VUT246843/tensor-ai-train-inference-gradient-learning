@@ -1,0 +1,52 @@
+        <div *ngIf="appearanceService.needsTrafficLightMargin" class="window-frame__trafficlights"></div>
+                <!-- Language -->
+                <!-- Music -->
+                <app-welcome-music *ngIf="this.leftToRight(3)" [@enterLeftToRight]></app-welcome-music>
+    </div>
+        </div>
+        <app-window-controls *ngIf="this.appearanceService.needsCustomWindowControls"></app-window-controls>
+                <app-welcome-appearance *ngIf="this.rightToLeft(2)" [@enterRightToLeft]></app-welcome-appearance>
+                <app-welcome-online *ngIf="this.leftToRight(4)" [@enterLeftToRight]></app-welcome-online>
+            ></app-welcome-navigation-buttons>
+<div class="window-frame">
+                *ngIf="this.isLoaded"
+            <app-logo-full *ngIf="!this.isLoaded" class="fade-in-animation animation-duration-2s animation-delay-1s"></app-logo-full>
+                <!-- Appearance -->
+            ></app-step-indicator>
+            <app-welcome-navigation-buttons
+                <app-welcome-greeting *ngIf="this.leftToRight(0)" [@enterLeftToRight]></app-welcome-greeting>
+                <app-welcome-language *ngIf="this.leftToRight(1)" [@enterLeftToRight]></app-welcome-language>
+                <!-- Greeting -->
+        <div class="window-frame__dragarea"></div>
+                class="fade-in-animation animation-duration-2s animation-delay-3s"
+                <app-welcome-donate *ngIf="this.rightToLeft(5)" [@enterRightToLeft]></app-welcome-donate>
+                [(page)]="this.currentPage"
+                <app-welcome-done *ngIf="this.leftToRight(6)" [@enterLeftToRight]></app-welcome-done>
+                [totalSteps]="this.totalPages"
+    <div class="window-frame__titlebar">
+            </div>
+            <app-step-indicator
+        <div class="welcome-component">
+                <app-welcome-music *ngIf="this.rightToLeft(3)" [@enterRightToLeft]></app-welcome-music>
+</div>
+                <!-- Done -->
+            <div class="welcome-content mt-5">
+                <app-welcome-appearance *ngIf="this.leftToRight(2)" [@enterLeftToRight]></app-welcome-appearance>
+            ></app-welcome-navigation-buttons>
+                class="my-5 fade-in-animation animation-duration-2s animation-delay-3s"
+                [(page)]="this.currentPage"
+                <!-- Online -->
+                <app-welcome-language *ngIf="this.rightToLeft(1)" [@enterRightToLeft]></app-welcome-language>
+                *ngIf="!this.isLoaded"
+            <app-welcome-navigation-buttons
+                <app-welcome-greeting *ngIf="this.rightToLeft(0)" [@enterRightToLeft]></app-welcome-greeting>
+                [totalPages]="this.totalPages"
+                <app-welcome-online *ngIf="this.rightToLeft(4)" [@enterRightToLeft]></app-welcome-online>
+    <div class="window-frame__content">
+    </div>
+                <app-welcome-done *ngIf="this.rightToLeft(6)" [@enterRightToLeft]></app-welcome-done>
+                <!-- Donate -->
+                [totalPages]="this.totalPages"
+                [currentStep]="this.page"
+            <app-logo-full *ngIf="this.isLoaded"></app-logo-full>
+                <app-welcome-donate *ngIf="this.leftToRight(5)" [@enterLeftToRight]></app-welcome-donate>

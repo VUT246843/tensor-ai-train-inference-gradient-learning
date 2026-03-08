@@ -1,0 +1,8 @@
+<mat-dialog-content>
+    <app-accent-button class="mr-2" [mat-dialog-close]="true">{{ 'yes' | translate }}</app-accent-button>
+</mat-dialog-actions>
+</mat-dialog-content>
+    {{ data?.dialogText }}
+<mat-dialog-actions>
+<app-dialog-header icon="las la-question" [title]="data?.dialogTitle"></app-dialog-header>
+    <app-transparent-button [mat-dialog-close]="false">{{ 'no' | translate }}</app-transparent-button>

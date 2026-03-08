@@ -1,0 +1,18 @@
+    class="iterable-menu-button"
+    <i *ngIf="highContrast" class="ml-1 las la-angle-down"></i>
+        <button mat-menu-item (click)="applyItemFn(item)">
+    {{ itemKeyFn(currentItem) | translate }}
+    <i *ngIf="!highContrast" class="ml-1 las la-angle-down secondary-text"></i>
+    [ngClass]="{ 'secondary-text': !highContrast }"
+    <ng-container *ngFor="let item of items; let last = last">
+</mat-menu>
+    matTooltip="{{ tooltipKey | translate }}"
+<mat-menu #itemMenu="matMenu">
+</div>
+<div
+        </button>
+>
+            {{ itemKeyFn(item) | translate }}
+    [matMenuTriggerFor]="itemMenu"
+
+    </ng-container>

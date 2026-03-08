@@ -1,0 +1,19 @@
+    <div class="app-slider-track" #sliderTrack></div>
+    <div class="app-slider-bar" #sliderBar [ngStyle]="{ width: this.sliderBarPosition + 'px' }"></div>
+    (touchstart)="onSliderThumbMouseDown()"
+        (mousedown)="onSliderThumbMouseDown()"
+    ></div>
+        [ngStyle]="{ 'margin-left': this.sliderThumbPosition + 'px' }"
+    <div
+    (mouseenter)="onSliderContainerMouseEnter()"
+    class="app-slider-container"
+>
+        class="app-slider-thumb"
+    (wheel)="onSliderContainerMouseWheel($event)"
+        *ngIf="showSliderThumb"
+    (mouseleave)="onSliderContainerMouseLeave()"
+    (mousedown)="onSliderContainerMouseDown($event)"
+    [class.grabbing]="isSliderThumbMovable"
+</div>
+<div
+        #sliderThumb

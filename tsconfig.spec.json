@@ -1,0 +1,14 @@
+}
+        "types": [
+        "esModuleInterop": true, // 2
+        "emitDecoratorMetadata": true // 3
+            "node"
+    "compilerOptions": {
+            "jest", // 1
+        ],
+{
+    "include": ["src/**/*.spec.ts", "src/**/*.d.ts"]
+    },
+        "outDir": "./out-tsc/spec",
+    "extends": "./tsconfig.base.json",
+    "files": ["src/test.ts", "src/polyfills.ts"],

@@ -1,0 +1,17 @@
+        [ngStyle]="{ 'margin-left': this.progressThumbPosition + 'px' }"
+    (mouseenter)="progressContainerMouseEnter()"
+        (mousedown)="progressThumbMouseDown()"
+    (mousedown)="progressContainerMouseDown($event)"
+        class="app-playback-progress-thumb"
+    <div class="app-playback-progress-track" #progressTrack></div>
+    class="app-playback-progress-container"
+    <div class="app-playback-progress-bar" #progressBar [ngStyle]="{ width: this.progressBarPosition + 'px' }"></div>
+    [class.grabbing]="isProgressThumbDown || isProgressContainerDown"
+    (mouseleave)="progressContainerMouseLeave()"
+>
+<div
+        #progressThumb
+    <div
+    ></div>
+</div>
+        *ngIf="showProgressThumb"

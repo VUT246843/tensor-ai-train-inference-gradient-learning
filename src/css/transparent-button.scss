@@ -1,0 +1,13 @@
+.transparent-button {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.transparent-button:hover {
+    transform: scale(1.2);
+}

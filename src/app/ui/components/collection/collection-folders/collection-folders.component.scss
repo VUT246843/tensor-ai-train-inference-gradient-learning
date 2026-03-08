@@ -1,0 +1,66 @@
+.fit-width {
+    max-width: min(100%, 400px);
+}
+
+.fit-width * {
+    width: inherit;
+    max-width: inherit;
+}
+
+.subfolder {
+    height: 30px;
+    border-radius: 6px;
+}
+
+.subfolder:hover {
+    background: var(--theme-hovered-item-background);
+}
+
+.subfolder:active {
+    background: var(--theme-hovered-item-background);
+}
+
+.folder-browser__list {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden !important;
+    overflow-y: auto;
+}
+
+.folder-selector-item {
+    max-width: 200px;
+}
+
+.folder-row {
+    display: flex;
+    width: 100%;
+}
+
+.folder__column1 {
+    flex: 1;
+    white-space: nowrap;
+    margin-right: 8px;
+}
+
+.folder__column2 {
+    
+    overflow: hidden;
+}
+
+.folder-inner-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px; /* space between sub-items */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.folder-inner-row__text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.folder-inner-row__chevron {
+    flex-shrink: 0; /* don't shrink */
+}

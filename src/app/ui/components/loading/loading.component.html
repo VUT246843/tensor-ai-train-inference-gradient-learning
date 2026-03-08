@@ -1,0 +1,14 @@
+        <div *ngIf="appearanceService.needsTrafficLightMargin" class="window-frame__trafficlights"></div>
+        <div class="loading-component">
+        <div class="window-frame__dragarea"></div>
+    <div class="window-frame__content">
+            <app-logo-full></app-logo-full>
+        </div>
+</div>
+    </div>
+            <h4 class="mt-5">{{ 'loading' | translate }}</h4>
+    </div>
+    <div class="window-frame__titlebar">
+            <mat-spinner class="mt-5" [diameter]="40"></mat-spinner>
+        <app-window-controls *ngIf="appearanceService.needsCustomWindowControls"></app-window-controls>
+<div class="window-frame">

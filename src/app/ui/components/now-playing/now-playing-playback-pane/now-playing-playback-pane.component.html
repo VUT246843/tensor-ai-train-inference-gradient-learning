@@ -1,0 +1,46 @@
+            <app-volume-control class="app-now-playing-playback-pane_volume mr-3"></app-volume-control>
+</div>
+    <app-playback-progress class="app-now-playing-playback-pane__progressbar">
+        </div>
+            <i
+                    (click)="this.navigateToLyrics()"
+                    matTooltip="{{ 'artist-information' | translate }}"
+                    [ngClass]="{ 'accent-color-important': this.currentNowPlayingPage === nowPlayingPageEnum.showcase }"
+        </button>
+        </div>
+                    (click)="this.navigateToShowcase()"
+                matTooltip="{{ 'playback-queue' | translate }}"
+            <i class="transparent-round-button__icon las la-redo-alt"></i>
+                ></i>
+            <app-playback-time class="mr-4"></app-playback-time>
+    <div class="app-now-playing-playback-pane__controls">
+                *ngIf="this.currentNowPlayingPage !== nowPlayingPageEnum.nothingPlaying"
+            <div
+                    matTooltip="{{ 'lyrics' | translate }}"
+                ></i>
+    </app-playback-progress>
+            >
+                    class="app-now-playing__button las la-tv pointer ml-4 mr-2"
+        <button class="transparent-round-button__button pointer mx-1" matRipple matTooltip="{{ 'loop' | translate }}">
+                <i
+                    matTooltip="{{ 'showcase' | translate }}"
+        <div class="app-now-playing-playback-pane-controls__center">
+                    class="app-now-playing__button las la-user pointer mx-2"
+            </div>
+                ></i>
+                (click)="this.showPlaybackQueue()"
+                class="d-flex flex-row align-items-center justify-content-flex-start"
+        <div class="app-now-playing-playback-pane-controls__right">
+<div class="app-now-playing-playback-pane">
+            ></i>
+                <i
+        </div>
+                    [ngClass]="{ 'accent-color-important': this.currentNowPlayingPage === nowPlayingPageEnum.lyrics }"
+                    class="app-now-playing__button las la-microphone pointer mx-2"
+                class="app-now-playing__button las la-tasks pointer mr-4"
+            <app-playback-controls></app-playback-controls>
+                    (click)="this.navigateToArtistInformation()"
+                    [ngClass]="{ 'accent-color-important': this.currentNowPlayingPage === nowPlayingPageEnum.artistInformation }"
+                <i
+        <div class="app-now-playing-playback-pane-controls__left">
+    </div>

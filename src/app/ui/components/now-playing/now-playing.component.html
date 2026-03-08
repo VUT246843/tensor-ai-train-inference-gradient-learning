@@ -1,0 +1,55 @@
+                    <!-- Showcase -->
+                    <!-- Nothing playing -->
+                    <app-now-playing-artist-info *ngIf="this.rightToLeft(3)" [@enterRightToLeft]></app-now-playing-artist-info>
+                    <app-now-playing-showcase *ngIf="this.leftToRight(1)" [@enterLeftToRight]></app-now-playing-showcase>
+<div>
+            ></app-window-controls>
+            <app-window-controls
+        <div class="window-frame__titlebar">
+        [@background2Animation]="background2Animation"
+                <div class="app-now-playing__content">
+        </div>
+                        class="app-now-playing-playback-controls__playback-pane"
+                    <app-now-playing-artist-info *ngIf="this.leftToRight(3)" [@enterLeftToRight]></app-now-playing-artist-info>
+        class="app-now-playing__backgroundimage"
+                *ngIf="appearanceService.needsCustomWindowControls"
+                    <app-now-playing-nothing-playing *ngIf="this.leftToRight(0)" [@enterLeftToRight]></app-now-playing-nothing-playing>
+                    ></app-now-playing-playback-pane>
+            <div *ngIf="appearanceService.needsTrafficLightMargin" class="window-frame__trafficlights"></div>
+    </div>
+        </div>
+                    <div
+            <div class="window-frame__dragarea"></div>
+            </div>
+                    <app-now-playing-showcase *ngIf="this.rightToLeft(1)" [@enterRightToLeft]></app-now-playing-showcase>
+                        [@controlsVisibility]="controlsVisibility"
+                        [@controlsVisibility]="controlsVisibility"
+            </div>
+            <div class="window-button back-button" (click)="this.goBackToCollectionAsync()" [@controlsVisibility]="controlsVisibility">
+            <app-switch-player-button [@controlsVisibility]="controlsVisibility"></app-switch-player-button>
+                    <app-now-playing-lyrics *ngIf="this.leftToRight(2)" [@enterLeftToRight]></app-now-playing-lyrics>
+                <div class="app-now-playing-playback-controls__container">
+    <div
+                [@controlsVisibility]="controlsVisibility"
+    ></div>
+                </div>
+                        class="app-now-playing-playback-controls__background theme-footer-background"
+                    <!-- Lyrics -->
+        [ngStyle]="{ 'background-image': 'url(' + background1 + ')' }"
+                <i class="back-button__icon las la-arrow-left"></i>
+        class="app-now-playing__backgroundimage"
+                    <!-- Artist info -->
+                    <app-now-playing-playback-pane
+                </div>
+        <div class="window-frame__content">
+    ></div>
+</div>
+                    <app-now-playing-nothing-playing *ngIf="this.rightToLeft(0)" [@enterRightToLeft]></app-now-playing-nothing-playing>
+            <div class="app-now-playing">
+                    <canvas id="nowPlayingAudioVisualizer" class="app-now-playing-playback-controls__audio-visualizer"></canvas>
+        [@background1Animation]="background1Animation"
+    <div class="window-frame">
+    <div
+                    <app-now-playing-lyrics *ngIf="this.rightToLeft(2)" [@enterRightToLeft]></app-now-playing-lyrics>
+                    ></div>
+        [ngStyle]="{ 'background-image': 'url(' + background2 + ')' }"

@@ -1,0 +1,19 @@
+    <mat-divider class="my-4"></mat-divider>
+    <div>
+<div class="d-flex flex-column p-4">
+    <div class="mt-4">
+    <div class="title">{{ 'log-file' | translate }}</div>
+            {{ 'view-log' | translate }}
+        <app-transparent-button (click)="this.showWelcomeScreenAsync()">
+    </div>
+        <app-toggle-switch [(isChecked)]="settings.showWelcome"> {{ 'show-welcome-screen-on-next-restart' | translate }}</app-toggle-switch>
+    <div>{{ 'something-wrong-look-in-log-file' | translate }}</div>
+    </div>
+    <div class="mt-4">
+        </app-transparent-button>
+    <div class="title">{{ 'welcome-screen' | translate }}</div>
+</div>
+        <app-transparent-button (click)="this.viewLog()">
+            {{ 'show-welcome-screen-now' | translate }}
+        </app-transparent-button>
+    </div>

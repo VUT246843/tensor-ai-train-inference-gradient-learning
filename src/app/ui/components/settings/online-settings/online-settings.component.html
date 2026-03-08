@@ -1,0 +1,59 @@
+    <div class="mt-3">
+            <app-accent-button class="mr-3" (click)="this.signInToLastFmAsync()">
+                <i class="las la-check mr-1 accent-color"></i>
+    </div>
+        <app-toggle-switch [(isChecked)]="this.settings.downloadArtistInformationFromLastFm">
+        <app-toggle-switch [(isChecked)]="this.checkForUpdates"> {{ 'check-for-updates' | translate }} </app-toggle-switch>
+    <div class="d-flex flex-column" [ngClass]="{ inactive: !this.enableLastFmScrobbling }">
+                <div class="secondary-text">{{ 'logged-out' | translate }}</div>
+    </div>
+    <mat-divider class="my-4"></mat-divider>
+            {{ 'enable-discord-rich-presence' | translate }}
+                <input [(ngModel)]="this.lastFmPassword" type="password" matInput placeholder="{{ 'password' | translate }}" />
+    <div>
+    <div>
+            {{ 'also-check-for-pre-releases' | translate }}
+    <div class="title">{{ 'lyrics' | translate }}</div>
+        <app-toggle-switch [(isChecked)]="this.downloadLyricsOnline">
+        </div>
+    <div class="title">{{ 'last-fm' | translate }}</div>
+    </div>
+                {{ 'logged-in' | translate }}
+        <div>
+    <mat-divider class="my-4"></mat-divider>
+            <div class="d-flex flex-row align-items-center" *ngIf="this.signInState === signInStateEnum.SignedIn">
+    <div>
+        </app-toggle-switch>
+    </div>
+    <div class="title">{{ 'discord' | translate }}</div>
+    </div>
+        <div class="mt-3">
+        </div>
+</div>
+            {{ 'download-lyrics-online' | translate }}
+            </app-accent-button>
+        </div>
+    <div>
+        <app-toggle-switch [(isChecked)]="this.enableLastFmScrobbling"> {{ 'enable-last-fm-scrobbling' | translate }} </app-toggle-switch>
+            <mat-form-field>
+            {{ 'download-artist-information-from-lastfm' | translate }}
+            </div>
+        </app-toggle-switch>
+    <mat-divider class="my-4"></mat-divider>
+        <div class="mt-3 d-flex flex-row">
+            <mat-form-field>
+        </app-toggle-switch>
+                {{ 'log-in' | translate }}
+                <input [(ngModel)]="this.lastFmUserName" matInput placeholder="{{ 'username' | translate }}" />
+    <div>
+    <div class="title">{{ 'updates' | translate }}</div>
+<div class="p-4">
+    </div>
+        </app-toggle-switch>
+        <app-toggle-switch [(isChecked)]="this.discordService.enableDiscordRichPresence">
+            </mat-form-field>
+            <div class="d-flex flex-row align-items-center" *ngIf="this.signInState !== signInStateEnum.SignedIn">
+    </div>
+            </mat-form-field>
+        <app-toggle-switch class="mt-3" [(isChecked)]="this.settings.checkForUpdatesIncludesPreReleases">
+            </div>

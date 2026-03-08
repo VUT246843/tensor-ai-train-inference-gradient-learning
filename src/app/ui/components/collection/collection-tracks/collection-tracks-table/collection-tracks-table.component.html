@@ -1,0 +1,243 @@
+    <app-totals
+    </cdk-virtual-scroll-viewport>
+                        [isOrderedBy]="this.isOrderedByDateAdded"
+                </td>
+                    <div class="ellipsis" [ngClass]="{ 'accent-color': track.isPlaying }">
+                </td>
+                <td *ngIf="this.tracksColumnsVisibility.showArtists" class="pointer" (click)="this.orderByArtists()">
+                <td class="w-48px">
+                <td class="w-72px" *ngIf="this.tracksColumnsVisibility.showSkipCount">
+                    </div>
+        <button mat-menu-item (click)="onDeleteAsync()">
+                        {{ track.dateAdded | formatTicksToDateTimeString }}
+                <td class="w-72px" *ngIf="this.tracksColumnsVisibility.showYear">
+></div>
+                        {{ track.playCount }}
+                    mat-menu-item
+        <ng-container *ngFor="let playlist of this.addToPlaylistMenu.playlists | keyvalue">
+                    </div>
+
+                <td *ngIf="this.tracksColumnsVisibility.showDateLastPlayed" class="pointer" (click)="this.orderByDateLastPlayed()">
+                </td>
+                </td>
+                <td *ngIf="this.tracksColumnsVisibility.showDateLastPlayed">
+        </button>
+                        [isOrderedBy]="this.isOrderedBySkipCount"
+                </td>
+                            playlist.value.name,
+    </div>
+                    ></app-collection-tracks-table-header>
+                    (click)="
+                        [isOrderedBy]="this.isOrderedByTrackNumber"
+                        [isOrderedAscending]="this.isOrderedAscending"
+                <span>{{ playlist.key }}</span>
+                    <div class="ellipsis" [ngClass]="{ 'accent-color': track.isPlaying }">
+    <ng-template matMenuContent let-genre="data">
+            (click)="this.showEditColumnsDialogAsync()"
+    <div class="mt-3 scrollbar-gutter-stable-y">
+        <table class="tracks-table">
+                        [isOrderedAscending]="this.isOrderedAscending"
+                        [text]="'plays' | translate"
+        </button>
+            <button mat-menu-item [matMenuTriggerFor]="playlistsMenu">
+                (click)="this.shuffleAllAsync()"
+                    <app-collection-tracks-table-header
+                        [text]="'year' | translate"
+                <td *ngIf="this.tracksColumnsVisibility.showDateAdded">
+                class="las la-random secondary-text font-16px pointer ml-2"
+        <div class="d-flex flex-row align-items-center">
+                    <app-collection-tracks-table-header
+                        {{ track.durationInMilliseconds | formatTrackDuration }}
+                </td>
+                </td>
+                <td *ngIf="this.tracksColumnsVisibility.showGenres" class="pointer" (click)="this.orderByGenres()">
+        <i
+                    <app-collection-tracks-table-header
+<mat-menu #trackContextMenu="matMenu">
+                (mousedown)="setSelectedTracks($event, track)"
+            <mat-menu #playlistsMenu="matMenu">
+                        [isOrderedBy]="this.isOrderedByPlayCount"
+                    <app-collection-tracks-table-header
+    [matMenuTriggerFor]="trackContextMenu"
+                        [isOrderedAscending]="this.isOrderedAscending"
+                    ></app-collection-tracks-table-header>
+
+                    <app-collection-tracks-table-header
+            <i
+    <div *ngIf="!this.addToPlaylistMenu.hasPlaylists" mat-menu-item class="inactive">{{ 'no-playlists' | translate }}</div>
+            class="las la-columns secondary-text pointer font-16px"
+                    <div class="ellipsis" [ngClass]="{ 'accent-color': track.isPlaying }">
+
+                <td *ngIf="this.tracksColumnsVisibility.showYear" class="w-72px pointer" (click)="this.orderByYear()">
+                        {{ track.year | zeroToBlank }}
+                    <div class="ellipsis" [ngClass]="{ 'accent-color': track.isPlaying }">
+                <td class="pointer" (click)="this.orderByTrackTitle()">
+                [ngClass]="{ 'selected-item-background-important': track.isSelected }"
+            <span>{{ 'add-to-playlist' | translate }}</span>
+                (contextmenu)="onTrackContextMenu($event, track)"
+<div class="h-100 w-100 d-flex flex-column">
+                </td>
+                    <div class="ellipsis" [ngClass]="{ 'accent-color': track.isPlaying }">
+                    ></app-collection-tracks-table-header>
+                <td *ngIf="this.tracksColumnsVisibility.showDateAdded" class="pointer" (click)="this.orderByDateAdded()">
+                        [text]="'last-played' | translate"
+    [style.top]="contextMenuOpener.positionY"
+            <span>{{ 'show-in-folder' | translate }}</span>
+                        {{ track.title }}
+                </td>
+                        {{ track.number | zeroToBlank }}
+                matTooltip="{{ 'shuffle-all' | translate }}"
+                </td>
+                        [isOrderedBy]="this.isOrderedByDateLastPlayed"
+                    <app-collection-tracks-table-header
+                        {{ track.albumTitle }}
+                        [isOrderedAscending]="this.isOrderedAscending"
+                    </div>
+                        {{ track.skipCount }}
+    <cdk-virtual-scroll-viewport class="flex-grow scrollbar-gutter-stable-y mt-2" itemSize="28">
+        </button>
+                <td *ngIf="this.tracksColumnsVisibility.showGenres">
+                <td *ngIf="this.tracksColumnsVisibility.showPlayCount" class="w-72px pointer" (click)="this.orderByPlayCount()">
+        </button>
+                    <app-collection-tracks-table-header
+                    <app-collection-tracks-table-header
+        ></i>
+                </td>
+                    "
+            <tr
+                        this.addToPlaylistMenu.addTracksToPlaylistAsync(
+                <td class="w-72px" *ngIf="this.tracksColumnsVisibility.showPlayCount">
+                <button
+                    <app-collection-tracks-table-header
+                    <app-collection-tracks-table-header
+            <tr class="tracks-table-header">
+                    <div class="ellipsis" [ngClass]="{ 'accent-color': track.isPlaying }">
+            <span>{{ 'add-to-playback-queue' | translate }}</span>
+            </i>
+        <mat-divider></mat-divider>
+                        [isOrderedBy]="this.isOrderedByYear"
+</div>
+                        [text]="'date-added' | translate"
+                <td *ngIf="this.tracksColumnsVisibility.showSkipCount" class="w-72px pointer" (click)="this.orderBySkipCount()">
+            <div *ngIf="this.tracks.tracks.length === 1">{{ 'track' | translate }}</div>
+    ></app-totals>
+            >
+        [totalDurationInMilliseconds]="this.tracks.totalDurationInMilliseconds"
+                <td class="w-84px" *ngIf="this.tracksColumnsVisibility.showRating"><app-rating [track]="track"></app-rating></td>
+                    <span>{{ playlist.value.name }}</span>
+            matTooltip="{{ 'edit-columns' | translate }}"
+            </mat-menu>
+</mat-menu>
+                        [isOrderedAscending]="this.isOrderedAscending"
+                    </div>
+                </td>
+    <div class="h-24px d-flex flex-row align-items-center justify-content-between">
+                    </div>
+        <button mat-menu-item [matMenuTriggerFor]="addToPlaylistContextMenu">
+                        {{ track.artists }}
+                    <app-collection-tracks-table-header
+                    ></app-collection-tracks-table-header>
+                        [isOrderedBy]="this.isOrderedByAlbum"
+                    ></app-collection-tracks-table-header>
+        </div>
+                    ></app-collection-tracks-table-header>
+                </td>
+                    </div>
+<div
+                        [isOrderedBy]="this.isOrderedByArtists"
+                <td *ngIf="this.tracksColumnsVisibility.showAlbum">
+                </td>
+            <span>{{ 'delete' | translate }}</span>
+        </table>
+            <div class="mr-2 accent-color">{{ this.tracks.tracks.length }}</div>
+                    <div class="ellipsis" [ngClass]="{ 'accent-color': track.isPlaying }">
+                class="tracks-table-row"
+                        [isOrderedAscending]="this.isOrderedAscending"
+                        [isOrderedAscending]="this.isOrderedAscending"
+                <td class="w-72px" *ngIf="this.tracksColumnsVisibility.showTrackNumber">
+                </td>
+                    <div class="ellipsis" [ngClass]="{ 'accent-color': track.isPlaying }">
+                        [isOrderedAscending]="this.isOrderedAscending"
+                </td>
+                        [isOrderedBy]="this.isOrderedByRating"
+                        [text]="'title' | translate"
+        <table class="tracks-table">
+    </div>
+    </ng-template>
+                    <app-collection-tracks-table-header
+                *cdkVirtualFor="let track of this.orderedTracks"
+                <td class="w-48px pointer"></td>
+                    *ngFor="let playlist of this.addToPlaylistMenu.playlists[playlist.key] | keyvalue"
+                </td>
+                    ></app-collection-tracks-table-header>
+    <div *ngIf="this.addToPlaylistMenu.hasPlaylists">
+                </td>
+                        icon="las la-clock"
+        class="mt-3"
+                </button>
+                    ></app-collection-tracks-table-header>
+                        )
+</mat-menu>
+                    <div class="ellipsis" [ngClass]="{ 'accent-color': track.isPlaying }">
+                        [isOrderedAscending]="this.isOrderedAscending"
+                    ></app-collection-tracks-table-header>
+    #trackContextMenuAnchor
+                    <app-playback-indicator *ngIf="track.isPlaying" [isSelected]="track.isSelected"></app-playback-indicator>
+                        [isOrderedBy]="this.isOrderedByGenres"
+                <td *ngIf="this.tracksColumnsVisibility.showAlbum" class="pointer" (click)="this.orderByAlbum()">
+                        [isOrderedAscending]="this.isOrderedAscending"
+
+                <td *ngIf="this.tracksColumnsVisibility.showDuration" class="w-72px pointer" (click)="this.orderByDuration()">
+                        {{ track.dateLastPlayed | formatTicksToDateTimeString }}
+                    </div>
+        <button mat-menu-item (click)="onShowInFolder()">
+    style="visibility: hidden; position: fixed"
+                        [isOrderedAscending]="this.isOrderedAscending"
+                            playlist.value.path,
+                        [text]="'album' | translate"
+                </td>
+                        [isOrderedBy]="this.isOrderedByDuration"
+                        [isOrderedBy]="this.isOrderedByTrackTitle"
+        <button mat-menu-item (click)="onAddToQueueAsync()">
+    [style.left]="contextMenuOpener.positionX"
+                            this.mouseSelectionWatcher.selectedItems
+                        text="#"
+                        {{ track.genres }}
+                    </div>
+                        [text]="'genres' | translate"
+            </tr>
+        <mat-divider></mat-divider>
+                <td *ngIf="this.tracksColumnsVisibility.showTrackNumber" class="w-72px pointer" (click)="this.orderByTrackNumber()">
+            <div *ngIf="this.tracks.tracks.length !== 1">{{ 'tracks' | translate }}</div>
+            </tr>
+                    ></app-collection-tracks-table-header>
+            >
+                (dblclick)="playbackService.enqueueAndPlayTracksStartingFromGivenTrackAsync(this.orderedTracks, track)"
+                    </div>
+        </ng-container>
+                    ></app-collection-tracks-table-header>
+                <td class="w-72px" *ngIf="this.tracksColumnsVisibility.showDuration">
+                    </div>
+<mat-menu #addToPlaylistContextMenu="matMenu">
+                        [text]="'skips' | translate"
+                </td>
+                </td>
+                </td>
+                    <div class="ellipsis" [ngClass]="{ 'accent-color': track.isPlaying }">
+                </td>
+        </table>
+                </td>
+                        [text]="'rating' | translate"
+                    ></app-collection-tracks-table-header>
+                <td>
+                    <div class="ellipsis" [ngClass]="{ 'accent-color': track.isPlaying }">
+                >
+                <td *ngIf="this.tracksColumnsVisibility.showArtists">
+                        class="ml-1"
+                        [text]="'artists' | translate"
+    </div>
+            </button>
+                <td *ngIf="this.tracksColumnsVisibility.showRating" class="w-84px pointer" (click)="this.orderByRating()">
+        [totalFileSizeInBytes]="this.tracks.totalFileSizeInBytes"
+                    </div>
+                        [isOrderedAscending]="this.isOrderedAscending"

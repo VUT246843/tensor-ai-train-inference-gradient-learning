@@ -1,0 +1,15 @@
+    genres = 5,
+}
+    playCount = 9,
+    duration = 6,
+    none = 0,
+    year = 8,
+    rating = 2,
+    skipCount = 10,
+    album = 4,
+    trackNumber = 7,
+    artists = 3,
+export enum TracksColumnsOrderColumn {
+    trackTitle = 1,
+    dateLastPlayed = 11,
+    dateAdded = 12,

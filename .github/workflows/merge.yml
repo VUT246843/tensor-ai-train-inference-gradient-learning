@@ -1,0 +1,144 @@
+            - name: upload deb artifact
+              with:
+              uses: notiz-dev/github-action-json-property@release
+            - name: upload build artifacts
+                  curl -L -o 7z.exe https://www.7-zip.org/a/7z2201-x64.exe
+            - name: Upload Build Artifact
+                  path: release/Dopamine-*.snap
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: install rpm and libarchive
+                  path: release/Dopamine-*.AppImage
+                  path: 'package.json'
+name: Merge builds
+    pull_request:
+            - name: run unit tests
+            - name: Create 7z Archive With Only EXE Files
+              run: sudo apt update
+              shell: cmd
+    merge_build_on_win:
+              run: npm run electron:mac
+              id: ver_name
+            - name: upload pacman artifact
+            - name: upload build artifacts
+              uses: notiz-dev/github-action-json-property@release
+              with:
+            - name: run unit tests
+                  path: release/Dopamine-*.deb
+                  prop_path: 'version'
+                  name: dopamine-merge-macos-arm
+              with:
+              id: ver_name
+            - name: build
+              run: npm run test
+        if: github.event.pull_request.merged == true
+            - name: build
+            - name: fetch current version
+              with:
+              uses: actions/upload-artifact@v4
+        if: github.event.pull_request.merged == true
+                  name: dopamine-nightly-win
+              uses: actions/upload-artifact@v4
+            - uses: actions/checkout@v2
+              run: npm run electron:mac
+
+              run: |
+            - name: build
+              run: npm install
+            - name: run unit tests
+            - name: Build
+        types: [closed]
+                  cd release
+    merge_build_on_linux:
+              uses: actions/upload-artifact@v4
+              run: sudo apt install rpm libarchive-tools
+              run: npm install
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@master
+                  name: dopamine-merge-rpm
+                  path: 'package.json'
+              id: ver_name
+              uses: notiz-dev/github-action-json-property@release
+            - name: Install dependencies
+            - uses: actions/setup-node@master
+        runs-on: windows-2022
+              with:
+jobs:
+              uses: actions/upload-artifact@v4
+                  name: dopamine-merge-macos-intel
+                  name: dopamine-merge-snap
+            - name: install dependencies
+              with:
+                  path: release/Dopamine-*.rpm
+            - name: Fetch current version
+                  path: release/Dopamine-*.pacman
+              run: npm run electron:windows
+              run: npm install
+
+        runs-on: ubuntu-22.04
+              run: npm run test
+            - name: install dependencies
+            - name: fetch current version
+                  Start-Process -FilePath 7z.exe -ArgumentList '/S' -Wait
+                  name: dopamine-merge-deb
+        if: github.event.pull_request.merged == true
+              uses: notiz-dev/github-action-json-property@release
+              with:
+              uses: actions/upload-artifact@v4
+              with:
+        runs-on: macos-15-intel
+            - name: update package directory
+    merge_build_on_mac_intel:
+              with:
+              with:
+
+              run: npm run test
+                  path: dopamine-nightly-win.7z
+                  path: 'package.json'
+                  prop_path: 'version'
+              run: npm run test
+            - name: Run unit tests
+                  path: 'package.json'
+                  prop_path: 'version'
+              id: ver_name
+            - name: fetch current version
+              with:
+              with:
+            - name: Download and Install 7-Zip
+              with:
+on:
+                  node-version: '22.x'
+        steps:
+              uses: actions/upload-artifact@v4
+                  node-version: '22.x'
+                  name: dopamine-merge-appimage
+            - name: upload appimage artifact
+              with:
+                  "C:\Program Files\7-Zip\7z.exe" a ../dopamine-nightly-win.7z Dopamine-*.exe
+                  prop_path: 'version'
+              uses: actions/upload-artifact@v4
+        if: github.event.pull_request.merged == true
+              run: npm run electron:linux
+
+            - uses: actions/checkout@v2
+                  name: dopamine-merge-pacman
+            - uses: actions/checkout@v2
+        steps:
+              uses: actions/upload-artifact@v4
+            - name: upload snap artifact
+env:
+                  path: release/Dopamine-*.dmg
+            - uses: actions/setup-node@master
+            - name: install dependencies
+    merge_build_on_mac_arm:
+                  path: release/Dopamine-*.dmg
+        steps:
+              run: |
+            - uses: actions/setup-node@master
+                  node-version: '22.x'
+                  node-version: '22.x'
+              with:
+              with:
+            - name: uploading rpm artifact
+        runs-on: macos-15
+              run: npm install

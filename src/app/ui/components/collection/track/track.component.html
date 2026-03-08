@@ -1,0 +1,45 @@
+                <div class="d-flex flex-row align-items-center justify-content-center red">
+        <div class="app-track__right">
+        <div class="largest pb-2 ellipsis" matTooltip="{{ track.albumArtists }}">{{ track.albumArtists }}</div>
+        </div>
+                </div>
+            {{ track.albumTitle }}
+<div class="d-flex flex-column">
+                    <app-playback-indicator *ngIf="track.isPlaying" class="mx-2" [isSelected]="track.isSelected"></app-playback-indicator>
+        <div
+        >
+                    <div [ngClass]="{ 'accent-color': track.isPlaying }">
+    >
+        </div>
+    </div>
+        class="app-track__body px-1"
+            class="secondary-text ellipsis"
+    <div class="d-flex flex-column mt-3 mb-1" *ngIf="this.canShowHeader && track.showHeader">
+        [matRippleTrigger]="trigger"
+            *ngIf="track.discNumber > 0 && track.discCount > 1"
+                <span class="app-track__top__title ellipsis" [ngClass]="{ 'accent-color': track.isPlaying }">{{ track.title }}</span>
+    </div>
+    <div
+                <span class="ellipsis secondary-text smaller">{{ track.artists }}</span>
+                <div class="app-track__playback__and__duration">
+            </div>
+                    <app-love class="app-track__love ml-2" [track]="track" *ngIf="this.settings.showLove"></app-love>
+                <span></span>
+</div>
+            <div class="app-track__bottom">
+                    <app-rating class="app-track__rating" [track]="track" *ngIf="this.settings.showRating"></app-rating>
+                </div>
+            {{ track.albumTitle }} ({{ track.discNumber }}/{{ track.discCount }})
+        [ngClass]="{ 'selected-item-background-important': track.isSelected }"
+            matTooltip="{{ track.albumTitle }} ({{ track.discNumber }}/{{ track.discCount }})"
+            </div>
+        #trigger
+        <div class="app-track__left secondary-text">
+                        {{ track.durationInMilliseconds | formatTrackDuration }}
+        </div>
+        <div class="secondary-text ellipsis" *ngIf="!(track.discNumber > 0 && track.discCount > 1)" matTooltip="{{ track.albumTitle }}">
+            <div class="app-track__top">
+                    </div>
+        matRipple
+            {{ track.number | formatTrackNumber }}
+        </div>
